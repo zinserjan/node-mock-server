@@ -83,16 +83,16 @@ AppController.prototype = extend(AppController.prototype, {
 		app.set('view engine', 'ejs');
 		app.set('views', __dirname + '/../views');
 
-		if (this.options.privateKey && this.options.certificate) {
-			https.createServer({
-				key: this.options.privateKey,
-				cert: this.options.certificate
-			}, app).listen(this.options.port, logFunc);
+		// if (this.options.privateKey && this.options.certificate) {
+		// 	https.createServer({
+		// 		key: this.options.privateKey,
+		// 		cert: this.options.certificate
+		// 	}, app).listen(this.options.port, logFunc);
+    //
+		// 	return;
+		// }
 
-			return;
-		}
-
-		app.listen(this.options.port, logFunc);
+		// app.listen(this.options.port, logFunc);
 	}
 
 });
